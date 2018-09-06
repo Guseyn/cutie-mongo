@@ -11,7 +11,7 @@ class ConnectedMongoClient extends AsyncObject {
 
   definedAsyncCall() {
     return (mongoClient, url, options, callback) => {
-      return mongoClient.connect(url, options, callback);
+      mongoClient.connect(url, options, callback);
     }
   }
 

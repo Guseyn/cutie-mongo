@@ -14,7 +14,7 @@ class StartedSession extends AsyncObject {
       return mongoClient.startSession(options);
     }
   }
-
+  
 }
 
 module.exports =  StartedSession;
