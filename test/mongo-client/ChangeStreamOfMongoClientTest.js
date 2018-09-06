@@ -11,25 +11,29 @@ const {
 } = require('@cuties/is');
 const {
   ConnectedMongoClient,
-  ClosedMongoClient,
-  StartedSession
+  ChangeStreamOfMongoClient,
+  ClosedMongoClient
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const clientSession = require('mongodb-core').Sessions.ClientSession;
+const changeStream = require('mongodb/lib/change_stream');
 
 new Assertion(
   new Is(
-    new StartedSession(
+    new ChangeStreamOfMongoClient(
       new ConnectedMongoClient(
         mongoClient, 
         'mongodb://localhost:27017', 
         { useNewUrlParser: true }
       ).as('mongoClient')
-    ), clientSession
+    ),
+    changeStream
   )
 ).after(
-  new ClosedMongoClient(
-    as('mongoClient')
+  new Assertion(
+    new Is(
+      new ClosedMongoClient(as('mongoClient')),
+      mongoClient
+    )
   )
 ).call();

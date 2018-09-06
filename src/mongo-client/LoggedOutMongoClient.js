@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is mongoClient
-//TODO: fix
+//TODO: fix, dbName problem
 class LoggedOutMongoClient extends AsyncObject {
 
   constructor(mongoClient, options) {
@@ -13,7 +13,7 @@ class LoggedOutMongoClient extends AsyncObject {
   definedAsyncCall() {
     return (mongoClient, options, callback) => {
       this.mongoClient = mongoClient;
-      return mongoClient.logout(options, callback);
+      mongoClient.logout(options, callback);
     }
   }
 

@@ -12,21 +12,20 @@ const {
 const {
   ConnectedMongoClient,
   ClosedMongoClient,
-  StartedSession
+  MongoClientWithSession
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const clientSession = require('mongodb-core').Sessions.ClientSession;
 
 new Assertion(
   new Is(
-    new StartedSession(
+    new MongoClientWithSession(
       new ConnectedMongoClient(
         mongoClient, 
         'mongodb://localhost:27017', 
         { useNewUrlParser: true }
-      ).as('mongoClient')
-    ), clientSession
+      ).as('mongoClient'), (session) => {}
+    ), mongoClient
   )
 ).after(
   new ClosedMongoClient(

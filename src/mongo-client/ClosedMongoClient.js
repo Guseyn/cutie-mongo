@@ -12,7 +12,7 @@ class ClosedMongoClient extends AsyncObject {
   definedAsyncCall() {
     return (mongoClient, force, callback) => {
       this.mongoClient = mongoClient;
-      return mongoClient.close(force, callback);
+      mongoClient.close(force, callback);
     }
   }
 
