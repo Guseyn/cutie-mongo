@@ -5,8 +5,8 @@ const AsyncObject = require('@cuties/cutie').AsyncObject;
 // Represented result is changeStream
 class ChangeStreamMongoClient extends AsyncObject {
 
-  constructor(mongoClient,pipeline, options) {
-    super(mongoClient, pipeline, options);
+  constructor(mongoClient, pipeline, options) {
+    super(mongoClient, pipeline, options || {});
   }
 
   definedSyncCall() {

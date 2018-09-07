@@ -6,7 +6,7 @@ const AsyncObject = require('@cuties/cutie').AsyncObject;
 class DbOfMongoClient extends AsyncObject {
 
   constructor(mongoClient, dbName, options) {
-    super(mongoClient, dbName, options);
+    super(mongoClient, dbName, options || {});
   }
 
   definedSyncCall() {

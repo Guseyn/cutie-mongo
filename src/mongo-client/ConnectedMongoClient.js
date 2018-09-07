@@ -6,7 +6,7 @@ const AsyncObject = require('@cuties/cutie').AsyncObject;
 class ConnectedMongoClient extends AsyncObject {
 
   constructor(mongoClient, url, options) {
-    super(mongoClient, url, options);
+    super(mongoClient, url, options || {});
   }
 
   definedAsyncCall() {
