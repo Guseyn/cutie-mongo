@@ -6,7 +6,7 @@ const AsyncObject = require('@cuties/cutie').AsyncObject;
 class MongoClientWithSession extends AsyncObject {
 
   constructor(mongoClient, options, operation) {
-    super(mongoClient, options, operation);
+    super(mongoClient, options || {}, operation);
   }
 
   definedSyncCall() {
