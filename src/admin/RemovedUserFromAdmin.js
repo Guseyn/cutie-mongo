@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is user
-class RemovedUser extends AsyncObject {
+class RemovedUserFromAdmin extends AsyncObject {
 
   constructor(admin, username, options) {
     super(admin, username, options || {});
@@ -12,7 +12,7 @@ class RemovedUser extends AsyncObject {
   definedAsyncCall() {
     return (admin, username, options, callback) => {
       this.user = {
-        username: username
+        user: username
       };
       admin.removeUser(username, options, callback);
     }
@@ -24,4 +24,4 @@ class RemovedUser extends AsyncObject {
   
 }
 
-module.exports =  RemovedUser;
+module.exports =  RemovedUserFromAdmin;

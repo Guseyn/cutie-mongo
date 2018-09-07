@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is user
-class AddedUser extends AsyncObject {
+class AddedUserToAdmin extends AsyncObject {
 
   constructor(admin, username, password, options) {
     super(admin, username, password, options || {});
@@ -21,4 +21,4 @@ class AddedUser extends AsyncObject {
   
 }
 
-module.exports =  AddedUser;
+module.exports =  AddedUserToAdmin;

@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is object
-class ExecutedCommand extends AsyncObject {
+class ExecutedCommandOfAdmin extends AsyncObject {
 
   constructor(admin, command, options) {
     super(admin, command, options || {});
@@ -17,4 +17,4 @@ class ExecutedCommand extends AsyncObject {
   
 }
 
-module.exports =  ExecutedCommand;
+module.exports =  ExecutedCommandOfAdmin;
