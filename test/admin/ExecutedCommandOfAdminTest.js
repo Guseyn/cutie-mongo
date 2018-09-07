@@ -14,14 +14,14 @@ const {
   ClosedMongoClient,
   DbOfMongoClient,
   AdminOfDb,
-  ExecutedCommand
+  ExecutedCommandOfAdmin
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
 
 new Assertion(
   new Is(
-    new ExecutedCommand(
+    new ExecutedCommandOfAdmin(
       new AdminOfDb(
         new DbOfMongoClient(
           new ConnectedMongoClient(

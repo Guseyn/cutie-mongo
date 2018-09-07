@@ -15,14 +15,14 @@ const {
   ClosedMongoClient,
   DbOfMongoClient,
   AdminOfDb,
-  AddedUser,
-  RemovedUser
+  AddedUserToAdmin,
+  RemovedUserFromAdmin
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
 
 new DeepEqualAssertion(
-  new AddedUser(
+  new AddedUserToAdmin(
     new AdminOfDb(
       new DbOfMongoClient(
         new ConnectedMongoClient(
@@ -37,7 +37,7 @@ new DeepEqualAssertion(
     {roles: [{ role: 'readWrite', db: 'test' }]}
   ), { user: 'test-cutie-username', pwd: '' }
 ).after(
-  new RemovedUser(
+  new RemovedUserFromAdmin(
     as('admin'),
     'test-cutie-username'
   ).after(
