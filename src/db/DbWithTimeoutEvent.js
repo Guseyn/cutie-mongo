@@ -14,7 +14,7 @@ class DbWithTimeoutEvent extends AsyncObject {
 
   definedSyncCall() {
     return (db, event) => {
-      db.on('close', event);
+      db.on('timeout', event);
       return db;
     }
   }

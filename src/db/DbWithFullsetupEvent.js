@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is db
-class DbWithFullsetupEvent extends AsyncObject {
+class DbWithFullSetupEvent extends AsyncObject {
 
   /*
     event is an Event with definedBody(db)
@@ -21,4 +21,4 @@ class DbWithFullsetupEvent extends AsyncObject {
 
 }
 
-module.exports = DbWithFullsetupEvent;
+module.exports = DbWithFullSetupEvent;

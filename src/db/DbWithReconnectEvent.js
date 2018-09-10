@@ -14,7 +14,7 @@ class DbWithReconnectEvent extends AsyncObject {
 
   definedSyncCall() {
     return (db, event) => {
-      db.on('error', event);
+      db.on('reconnect', event);
       return db;
     }
   }
