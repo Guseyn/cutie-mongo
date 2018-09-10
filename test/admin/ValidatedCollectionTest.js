@@ -34,7 +34,7 @@ new CreatedCollection(
       new ValidatedCollection(
         new AdminOfDb(
           as('db')
-        ).as('admin'), 'cutie-db.cutie-collection'
+        ).as('admin'), 'cutie-collection'
       ), Object
     )
   ).after(
