@@ -20,7 +20,7 @@ module.exports = {
   DbStats: require('./src/db/DbStats'),
   DbWithCloseEvent: require('./src/db/DbWithCloseEvent'),
   DbWithErrorEvent: require('./src/db/DbWithErrorEvent'),
-  DbWithFullsetupEvent: require('./src/db/DbWithFullsetupEvent'),
+  DbWithFullSetupEvent: require('./src/db/DbWithFullSetupEvent'),
   DbWithParseErrorEvent: require('./src/db/DbWithParseErrorEvent'),
   DbWithProfilingLevel: require('./src/db/DbWithProfilingLevel'),
   DbWithReconnectEvent: require('./src/db/DbWithReconnectEvent'),

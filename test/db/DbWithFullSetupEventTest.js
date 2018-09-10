@@ -14,29 +14,27 @@ const {
   ConnectedMongoClient,
   ClosedMongoClient,
   DbOfMongoClient,
-  DbWithCloseEvent
+  DbWithFullSetupEvent
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
 const db = require('mongodb').Db;
 
-class CloseEvent extends Event {
+class FullSetupEvent extends Event {
 
   constructor() {
     super();
   }
 
-  definedBody(error) {
-    new Assertion(
-      new IsUndefined(error)
-    ).call();
+  definedBody(db) {
+    
   }
 
 }
 
 new Assertion(
   new Is(
-    new DbWithCloseEvent(
+    new DbWithFullSetupEvent(
       new DbOfMongoClient(
         new ConnectedMongoClient(
           mongoClient, 
@@ -44,7 +42,7 @@ new Assertion(
           { useNewUrlParser: true }
         ).as('mongoClient'),
         'test-cutie-db'
-      ), new CloseEvent()
+      ), new FullSetupEvent()
     ), db
   )
 ).after(
