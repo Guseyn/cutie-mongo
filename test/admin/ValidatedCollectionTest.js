@@ -14,13 +14,13 @@ const {
   ClosedMongoClient,
   DbOfMongoClient,
   AdminOfDb,
-  CollectionOfDb,
+  CreatedCollection,
   ValidatedCollection
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
 
-new CollectionOfDb(
+new CreatedCollection(
   new DbOfMongoClient(
     new ConnectedMongoClient(
       mongoClient,
@@ -42,4 +42,4 @@ new CollectionOfDb(
       as('mongoClient')
     )
   )
-)//.call(); TODO: fix
+).call();
