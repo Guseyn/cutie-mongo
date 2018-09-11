@@ -37,6 +37,13 @@ module.exports = {
   UnrefDb: require('./src/db/UnrefDb'),
   WatchedDb: require('./src/db/WatchedDb'),
 
+  Decimal128FromString: require('./src/decimal128/Decimal128FromString'),
+  StringFromDecimal128: require('./src/decimal128/StringFromDecimal128'),
+
+  ValueOfDouble: require('./src/double/ValueOfDouble'),
+
+  ValueOfInt32: require('./src/int32/ValueOfInt32'),
+
   ChangeStreamOfMongoClient: require('./src/mongo-client/ChangeStreamOfMongoClient'),
   ClosedMongoClient: require('./src/mongo-client/ClosedMongoClient'),
   ConnectedMongoClient: require('./src/mongo-client/ConnectedMongoClient'),
