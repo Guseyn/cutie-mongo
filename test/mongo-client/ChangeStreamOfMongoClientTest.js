@@ -16,7 +16,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const changeStream = require('mongodb/lib/change_stream');
+const ChangeStream = require('mongodb/lib/change_stream');
 
 new Assertion(
   new Is(
@@ -27,7 +27,7 @@ new Assertion(
         { useNewUrlParser: true }
       ).as('mongoClient')
     ),
-    changeStream
+    ChangeStream
   )
 ).after(
   new Assertion(

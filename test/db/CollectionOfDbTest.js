@@ -17,7 +17,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const collection = require('mongodb').Collection;
+const Collection = require('mongodb').Collection;
 
 new Assertion(
   new Is(
@@ -30,7 +30,7 @@ new Assertion(
         ).as('mongoClient'),
         'test-cutie-db'
       ), 'test-cutie-collection'
-    ), collection
+    ), Collection
   )
 ).after(
   new ClosedMongoClient(as('mongoClient'))

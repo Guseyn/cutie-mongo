@@ -16,7 +16,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const db = require('mongodb').Db;
+const Db = require('mongodb').Db;
 
 new Assertion(
   new Is(
@@ -27,7 +27,7 @@ new Assertion(
         { useNewUrlParser: true }
       ).as('mongoClient'),
       'test'
-    ), db
+    ), Db
   )
 ).after(
   new ClosedMongoClient(as('mongoClient'))

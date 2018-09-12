@@ -20,7 +20,6 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const collection = require('mongodb').Collection;
 
 new CreatedCollection(
   new DbOfMongoClient(

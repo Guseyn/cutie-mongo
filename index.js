@@ -16,6 +16,7 @@ module.exports = {
   CollectionOfDb: require('./src/db/CollectionOfDb'),
   CollectionsOfDb: require('./src/db/CollectionsOfDb'),
   CreatedCollection: require('./src/db/CreatedCollection'),
+  CreatedDb: require('./src/db/CreatedDb'),
   CreatedIndexByDb: require('./src/db/CreatedIndexByDb'),
   DbStats: require('./src/db/DbStats'),
   DbWithCloseEvent: require('./src/db/DbWithCloseEvent'),
@@ -47,12 +48,15 @@ module.exports = {
   ChangeStreamOfMongoClient: require('./src/mongo-client/ChangeStreamOfMongoClient'),
   ClosedMongoClient: require('./src/mongo-client/ClosedMongoClient'),
   ConnectedMongoClient: require('./src/mongo-client/ConnectedMongoClient'),
+  CreatedMongoClient: require('./src/mongo-client/CreatedMongoClient'),
   DbOfMongoClient: require('./src/mongo-client/DbOfMongoClient'),
   IsConnected: require('./src/mongo-client/IsConnected'),
   LoggedOutMongoClient: require('./src/mongo-client/LoggedOutMongoClient'),
   MongoClientWithSession: require('./src/mongo-client/MongoClientWithSession'),
   StartedSession: require('./src/mongo-client/StartedSession'),
 
-  CreatedMongoError: require('./src/mongo-error/CreatedMongoError')
+  CreatedMongoError: require('./src/mongo-error/CreatedMongoError'),
+
+  CreatedServer: require('./src/server/CreatedServer')
 
 }
