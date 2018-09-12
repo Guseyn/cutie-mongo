@@ -13,7 +13,6 @@ const {
   ValueOfInt32
 } = require('./../../index');
 
-const mongoClient = require('mongodb').MongoClient;
 const Int32 = require('mongodb').Int32;
 
 new Assertion(

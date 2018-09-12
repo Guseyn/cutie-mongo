@@ -51,6 +51,8 @@ module.exports = {
   IsConnected: require('./src/mongo-client/IsConnected'),
   LoggedOutMongoClient: require('./src/mongo-client/LoggedOutMongoClient'),
   MongoClientWithSession: require('./src/mongo-client/MongoClientWithSession'),
-  StartedSession: require('./src/mongo-client/StartedSession')
+  StartedSession: require('./src/mongo-client/StartedSession'),
+
+  CreatedMongoError: require('./src/mongo-error/CreatedMongoError')
 
 }

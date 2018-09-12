@@ -14,7 +14,6 @@ const {
   StringFromDecimal128
 } = require('./../../index');
 
-const mongoClient = require('mongodb').MongoClient;
 const Decimal128 = require('mongodb').Decimal128;
 
 new Assertion(
