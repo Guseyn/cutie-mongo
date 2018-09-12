@@ -21,7 +21,7 @@ const mongoClient = require('mongodb').MongoClient;
 new ConnectedMongoClient(
   mongoClient, 
   'mongodb://localhost:27017', 
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, authSource: 'test' }
 ).as('mongoClient').after(
   new DbOfMongoClient(
     as('mongoClient'), 'test'
@@ -29,11 +29,11 @@ new ConnectedMongoClient(
     new Assertion(
       new Is(
         new LoggedOutMongoClient(
-          as('mongoClient')
+          as('mongoClient'), {dbName: 'test'}
         ), mongoClient
       )
     ).after(
       new ClosedMongoClient(as('mongoClient'))
     )
   ) 
-)//.call(); it does not work as expected
+).call();
