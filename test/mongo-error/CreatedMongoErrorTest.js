@@ -7,18 +7,18 @@ const {
   Assertion
 } = require('@cuties/assert');
 const {
-  IsNumber
+  Is
 } = require('@cuties/is');
 const {
-  ValueOfDouble
+  CreatedMongoError
 } = require('./../../index');
 
-const Double = require('mongodb').Double;
+const MongoError = require('mongodb').MongoError;
 
 new Assertion(
-  new IsNumber(
-    new ValueOfDouble(
-      new Double(64)
-    )
+  new Is(
+    new CreatedMongoError(
+      'message'
+    ), MongoError
   )
 ).call()
