@@ -18,7 +18,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const db = require('mongodb').Db;
+const Db = require('mongodb').Db;
 
 class ParseErrorEvent extends Event {
 
@@ -43,7 +43,7 @@ new Assertion(
         ).as('mongoClient'),
         'test-cutie-db'
       ), new ParseErrorEvent()
-    ), db
+    ), Db
   )
 ).after(
   new ClosedMongoClient(as('mongoClient'))

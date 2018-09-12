@@ -19,7 +19,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const collection = require('mongodb').Collection;
+const Collection = require('mongodb').Collection;
 
 new CreatedCollection(
   new DbOfMongoClient(
@@ -37,7 +37,7 @@ new CreatedCollection(
         as('db'),
         'test-cutie-collection-11',
         'test-cutie-collection-11-1'
-      ), collection
+      ), Collection
     )
   ).after(
     new DroppedCollection(

@@ -18,7 +18,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const db = require('mongodb').Db;
+const Db = require('mongodb').Db;
 
 class TimeoutEvent extends Event {
 
@@ -43,7 +43,7 @@ new Assertion(
         ).as('mongoClient'),
         'test-cutie-db'
       ), new TimeoutEvent()
-    ), db
+    ), Db
   )
 ).after(
   new ClosedMongoClient(as('mongoClient'))

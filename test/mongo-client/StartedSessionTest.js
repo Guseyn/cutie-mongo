@@ -16,7 +16,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const clientSession = require('mongodb-core').Sessions.ClientSession;
+const ClientSession = require('mongodb-core').Sessions.ClientSession;
 
 new Assertion(
   new Is(
@@ -26,7 +26,7 @@ new Assertion(
         'mongodb://localhost:27017', 
         { useNewUrlParser: true }
       ).as('mongoClient')
-    ), clientSession
+    ), ClientSession
   )
 ).after(
   new ClosedMongoClient(

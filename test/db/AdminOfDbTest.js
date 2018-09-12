@@ -17,7 +17,7 @@ const {
 } = require('./../../index');
 
 const mongoClient = require('mongodb').MongoClient;
-const admin = require('mongodb').Admin;
+const Admin = require('mongodb').Admin;
 
 new Assertion(
   new Is(
@@ -30,7 +30,7 @@ new Assertion(
         ).as('mongoClient'),
         'test'
       )
-    ), admin
+    ), Admin
   )
 ).after(
   new ClosedMongoClient(as('mongoClient'))
