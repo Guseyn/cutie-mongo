@@ -11,6 +11,8 @@ module.exports = {
   ServerStatus: require('./src/admin/ServerStatus'),
   ValidatedCollection: require('./src/admin/ValidatedCollection'),
 
+  CreatedCode: require('./src/code/CreatedCode'),
+
   AddedUserToDb: require('./src/db/AddedUserToDb'),
   AdminOfDb: require('./src/db/AdminOfDb'),
   CollectionOfDb: require('./src/db/CollectionOfDb'),
@@ -37,6 +39,8 @@ module.exports = {
   RenamedCollection: require('./src/db/RenamedCollection'),
   UnrefDb: require('./src/db/UnrefDb'),
   WatchedDb: require('./src/db/WatchedDb'),
+
+  CreatedDBRef: require('./src/db-ref/CreatedDBRef'),
 
   Decimal128FromString: require('./src/decimal128/Decimal128FromString'),
   StringFromDecimal128: require('./src/decimal128/StringFromDecimal128'),
