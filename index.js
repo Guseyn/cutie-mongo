@@ -11,6 +11,13 @@ module.exports = {
   ServerStatus: require('./src/admin/ServerStatus'),
   ValidatedCollection: require('./src/admin/ValidatedCollection'),
 
+  BinaryAsString: require('./src/binary/BinaryAsString'),
+  BinaryWithWrittenString: require('./src/binary/BinaryWithWrittenString'),
+  CreatedBinary: require('./src/binary/CreatedBinary'),
+  LengthOfBinary: require('./src/binary/LengthOfBinary'),
+  ReadBufferFromBinary: require('./src/binary/ReadBufferFromBinary'),
+  UpdatedBinary: require('./src/binary/UpdatedBinary'),
+
   CreatedCode: require('./src/code/CreatedCode'),
 
   AddedUserToDb: require('./src/db/AddedUserToDb'),
