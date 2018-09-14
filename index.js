@@ -68,10 +68,10 @@ module.exports = {
 
   CreatedMongoError: require('./src/mongo-error/CreatedMongoError'),
 
+  AreObjectIdsEqual: require('./src/object-id/AreObjectIdsEqual'),
   CreatedObjectId: require('./src/object-id/CreatedObjectId'),
-  GeneratedBufferByTime: require('./src/object-id/GeneratedBufferByTime'),
+  GeneratedBufferByObjectIdAndTime: require('./src/object-id/GeneratedBufferByObjectIdAndTime'),
   HexStringFromObjectId: require('./src/object-id/HexStringFromObjectId'),
-  IsObjectIdEqualsTo: require('./src/object-id/IsObjectIdEqualsTo'),
   IsObjectIdValid: require('./src/object-id/IsObjectIdValid'),
   ObjectIdFromHexString: require('./src/object-id/ObjectIdFromHexString'),
   ObjectIdFromTime: require('./src/object-id/ObjectIdFromTime'),

@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is boolean
-class IsObjectIdEqualsTo extends AsyncObject {
+class AreObjectIdsEqual extends AsyncObject {
 
   constructor(objectId, otherId) {
     super(objectId, otherId);
@@ -17,4 +17,4 @@ class IsObjectIdEqualsTo extends AsyncObject {
 
 }
 
-module.exports = IsObjectIdEqualsTo;
+module.exports = AreObjectIdsEqual;

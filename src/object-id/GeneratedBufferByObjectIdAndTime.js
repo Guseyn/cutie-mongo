@@ -3,7 +3,7 @@
 const AsyncObject = require('@cuties/cutie').AsyncObject;
 
 // Represented result is buffer
-class GeneratedBufferByTime extends AsyncObject {
+class GeneratedBufferByObjectIdAndTime extends AsyncObject {
 
   constructor(objectId, time) {
     super(objectId, time);
@@ -17,4 +17,4 @@ class GeneratedBufferByTime extends AsyncObject {
 
 }
 
-module.exports = GeneratedBufferByTime;
+module.exports = GeneratedBufferByObjectIdAndTime;
