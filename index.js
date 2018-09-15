@@ -77,6 +77,15 @@ module.exports = {
   ObjectIdFromTime: require('./src/object-id/ObjectIdFromTime'),
   TimestampOfObjectId: require('./src/object-id/TimestampOfObjectId'),
 
-  CreatedServer: require('./src/server/CreatedServer')
+  CreatedServer: require('./src/server/CreatedServer'),
+  ServerWithCloseEvent: require('./src/server/ServerWithCloseEvent'),
+  ServerWithCommandFailedEvent: require('./src/server/ServerWithCommandFailedEvent'),
+  ServerWithCommandStartedEvent: require('./src/server/ServerWithCommandStartedEvent'),
+  ServerWithCommandSucceededEvent: require('./src/server/ServerWithCommandSucceededEvent'),
+  ServerWithConnectEvent: require('./src/server/ServerWithConnectEvent'),
+  ServerWithErrorEvent: require('./src/server/ServerWithErrorEvent'),
+  ServerWithParseErrorEvent: require('./src/server/ServerWithParseErrorEvent'),
+  ServerWithReconnectEvent: require('./src/server/ServerWithReconnectEvent'),
+  ServerWithTimeoutEvent: require('./src/server/ServerWithTimeoutEvent')
 
 }
