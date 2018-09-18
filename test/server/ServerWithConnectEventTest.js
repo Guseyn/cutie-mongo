@@ -30,7 +30,7 @@ new Assertion(
   new Is(
     new ServerWithConnectEvent(
       new CreatedServer(
-        'mongodb://localhost:27017'
+        'mongodb://localhost', 27017,
       ),
       new ConnectEvent()
     ), Server
