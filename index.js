@@ -102,6 +102,8 @@ module.exports = {
   ServerWithErrorEvent: require('./src/server/ServerWithErrorEvent'),
   ServerWithParseErrorEvent: require('./src/server/ServerWithParseErrorEvent'),
   ServerWithReconnectEvent: require('./src/server/ServerWithReconnectEvent'),
-  ServerWithTimeoutEvent: require('./src/server/ServerWithTimeoutEvent')
+  ServerWithTimeoutEvent: require('./src/server/ServerWithTimeoutEvent'),
+
+  OptionsWith: require('./src/OptionsWith')
 
 }
