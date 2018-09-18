@@ -18,4 +18,4 @@ class CreatedReplSet extends AsyncObject {
 
 }
 
-module.exports = ReplSet;
+module.exports = CreatedReplSet;

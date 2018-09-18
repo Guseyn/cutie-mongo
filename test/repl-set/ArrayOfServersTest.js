@@ -1,37 +1,24 @@
 'use strict'
 
 const {
-  Event
-} = require('@cuties/cutie');
-const {
   Assertion
 } = require('@cuties/assert');
 const {
-  Is
+  IsArray
 } = require('@cuties/is');
 const {
   CreatedServer,
-  ServerWithCloseEvent
+  ArrayOfServers
 } = require('./../../index');
 
 const Server = require('mongodb').Server;
 
-class CloseEvent extends Event {
-
-  constructor() {
-    super();
-  }
-
-  definedBody(obj) {}
-
-}
-
 new Assertion(
-  new Is(
-    new ServerWithCloseEvent(
+  new IsArray(
+    new ArrayOfServers(
       new CreatedServer('mongodb://localhost', 27017),
-      new CloseEvent()
-    ), Server
+      new CreatedServer('mongodb://localhost', 27018),
+      new CreatedServer('mongodb://localhost', 27019)
+    )
   )
 ).call();
-

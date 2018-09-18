@@ -30,7 +30,7 @@ new Assertion(
   new Is(
     new ServerWithCommandStartedEvent(
       new CreatedServer(
-        'mongodb://localhost:27017',
+        'mongodb://localhost', 27017,
         {monitorCommands: true}
       ),
       new CommandStartedEvent()

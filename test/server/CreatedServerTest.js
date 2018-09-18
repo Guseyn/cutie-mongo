@@ -17,6 +17,6 @@ const Server = require('mongodb').Server;
 
 new Assertion(
   new Is(
-    new CreatedServer('mongodb://localhost:27017'), Server
+    new CreatedServer('mongodb://localhost', 27017), Server
   )
 ).call();

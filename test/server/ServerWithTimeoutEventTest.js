@@ -30,7 +30,7 @@ new Assertion(
   new Is(
     new ServerWithTimeoutEvent(
       new CreatedServer(
-        'mongodb://localhost:27017'
+        'mongodb://localhost', 27017,
       ),
       new TimeoutEvent()
     ), Server
