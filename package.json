@@ -15,11 +15,11 @@
     "cutie"
   ],
   "dependencies": {
-    "@cuties/cutie": "1.4.3",
-    "@cuties/assert": "1.1.4",
-    "@cuties/is": "1.0.6",
+    "@cuties/cutie": "1.4.4",
+    "@cuties/assert": "1.1.5",
+    "@cuties/is": "1.0.8",
     "mongodb": "3.1.4",
-    "test-executor": "1.1.1"
+    "test-executor": "1.1.2"
   },
   "author": "guseyn",
   "license": "MIT",

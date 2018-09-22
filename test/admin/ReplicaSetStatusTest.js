@@ -21,7 +21,7 @@ const mongoClient = require('mongodb').MongoClient;
 
 new ConnectedMongoClient(
   mongoClient,
-  'mongodb://localhost:27017', 
+  'mongodb://localhost:27017',
   { useNewUrlParser: true }
 ).as('mongoClient').after(
   new Assertion(
